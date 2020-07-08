@@ -12,7 +12,7 @@ import (
 
 func dowork(n int) {
 	for i := 0; i < n; i++ {
-		time.Sleep(1 * time.Millisecond)
+//		time.Sleep(1 * time.Second)
 		fmt.Println(i)
 	}
 }
@@ -20,5 +20,5 @@ func dowork(n int) {
 func main() {
    	flag.Parse()
 	go dowork(*count)
-       dowork(*count)
+    time.Sleep(time.Second)
 }
